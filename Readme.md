@@ -138,3 +138,264 @@ differences between each of the data structures in the Java Collections Framewor
 These are the primary differences between various data structures in the Java Collections Framework,
 including their implementations, performance characteristics, and common usage scenarios. 
 The choice of data structure depends on the specific requirements and usage patterns of your application.
+
+Here is a comprehensive list of the data structures from the Java Collections Framework and their time complexities for the basic operations: searching, sorting, insertion, deletion, updating, and traversing.
+
+### List Implementations
+- **ArrayList**
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1) amortized, O(n) worst case
+    - Deletion: O(n)
+    - Updation: O(1)
+    - Traversing: O(n)
+
+- **LinkedList**
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1)
+    - Deletion: O(1)
+    - Updation: O(n) (finding the node is O(n), updating is O(1))
+    - Traversing: O(n)
+
+- **Vector**
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1) amortized, O(n) worst case
+    - Deletion: O(n)
+    - Updation: O(1)
+    - Traversing: O(n)
+
+- **Stack** (extends Vector)
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1) amortized, O(n) worst case
+    - Deletion: O(1)
+    - Updation: O(1)
+    - Traversing: O(n)
+
+- **CopyOnWriteArrayList**
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(n)
+    - Deletion: O(n)
+    - Updation: O(n)
+    - Traversing: O(n)
+
+### Set Implementations
+- **HashSet**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (unsorted)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **LinkedHashSet**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (insertion order)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **TreeSet**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+- **EnumSet**
+    - Searching: O(1)
+    - Sorting: N/A (natural order of enum)
+    - Insertion: O(1)
+    - Deletion: O(1)
+    - Updation: O(1)
+    - Traversing: O(n)
+
+- **CopyOnWriteArraySet**
+    - Searching: O(n)
+    - Sorting: N/A (unsorted)
+    - Insertion: O(n)
+    - Deletion: O(n)
+    - Updation: O(n)
+    - Traversing: O(n)
+
+### Queue Implementations
+- **PriorityQueue**
+    - Searching: O(n)
+    - Sorting: O(n log n) (priority-based)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(n)
+    - Traversing: O(n)
+
+- **ArrayDeque**
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1) amortized, O(n) worst case
+    - Deletion: O(1) amortized, O(n) worst case
+    - Updation: O(n)
+    - Traversing: O(n)
+
+- **LinkedBlockingQueue**
+    - Searching: O(n)
+    - Sorting: N/A
+    - Insertion: O(1)
+    - Deletion: O(1)
+    - Updation: O(n)
+    - Traversing: O(n)
+
+- **PriorityBlockingQueue**
+    - Searching: O(n)
+    - Sorting: O(n log n) (priority-based)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(n)
+    - Traversing: O(n)
+
+### Map Implementations
+- **HashMap**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (unsorted)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **LinkedHashMap**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (insertion order)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **TreeMap**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+- **Hashtable**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (unsorted)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **IdentityHashMap**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (unsorted)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **WeakHashMap**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (unsorted)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **EnumMap**
+    - Searching: O(1)
+    - Sorting: N/A (natural order of enum)
+    - Insertion: O(1)
+    - Deletion: O(1)
+    - Updation: O(1)
+    - Traversing: O(n)
+
+- **ConcurrentHashMap**
+    - Searching: O(1) average, O(n) worst case
+    - Sorting: N/A (unsorted)
+    - Insertion: O(1) average, O(n) worst case
+    - Deletion: O(1) average, O(n) worst case
+    - Updation: O(1) average, O(n) worst case
+    - Traversing: O(n)
+
+- **ConcurrentSkipListMap**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+### Deque Implementations
+- **ArrayDeque**
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1) amortized, O(n) worst case
+    - Deletion: O(1) amortized, O(n) worst case
+    - Updation: O(n)
+    - Traversing: O(n)
+
+- **LinkedList** (as Deque)
+    - Searching: O(n)
+    - Sorting: O(n log n)
+    - Insertion: O(1)
+    - Deletion: O(1)
+    - Updation: O(n)
+    - Traversing: O(n)
+
+### SortedSet Implementations
+- **TreeSet**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+### NavigableSet Implementations
+- **TreeSet**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+- **ConcurrentSkipListSet**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing
+
+      : O(n)
+
+### NavigableMap Implementations
+- **TreeMap**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+- **ConcurrentSkipListMap**
+    - Searching: O(log n)
+    - Sorting: O(n log n)
+    - Insertion: O(log n)
+    - Deletion: O(log n)
+    - Updation: O(log n)
+    - Traversing: O(n)
+
+### Concurrency Locks
+- **Lock Interface** and **ReentrantLock**
+    - Lock acquisition and release: O(1)
+
+- **ReadWriteLock Interface** and **ReentrantReadWriteLock**
+    - Lock acquisition and release: O(1)
+
+These time complexities provide a general overview. However, the actual performance can depend on many factors, including the specific implementation, the nature of the data, and the JVM's optimization.
